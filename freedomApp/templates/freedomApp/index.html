@@ -5,3 +5,14 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, est.</p>
     </div>
 {% endblock content %}
+
+{% block input-form %}
+    <div class="input-card">
+        <form action="addConfession" method="post" class="main-input-form">
+            {% csrf_token %}
+            <input type="text" name="user-alias" placeholder="Alias" class="name-input">
+            <input type="text" name="confession" placeholder="Your confession... " class="confession-input">
+            <input type="submit" value="Add" class="submit-btn">
+        </form>
+    </div>
+{% endblock input-form %}
