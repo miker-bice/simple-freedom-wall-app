@@ -10,5 +10,4 @@ class Confession(models.Model):
     confession = models.CharField(max_length=2000)
 
 
-    
 
