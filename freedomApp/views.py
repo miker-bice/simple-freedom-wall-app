@@ -6,7 +6,8 @@ from .models import Confession
 
 # Create your views here.
 def index(request):
-    return render(request, 'freedomApp/index.html')
+    all_confession_items = Confession.objects.all()
+    return render(request, 'freedomApp/index.html', {'all_items': all_confession_items})
 
 
 # This function saves new confessions made by the user

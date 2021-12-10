@@ -1,8 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
     <div class="confessions-card">
-        <h3>Sample Name</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, est.</p>
+        {% for item in all_items %}
+        <h3>{{ item.user_alias }}</h3>
+        <p>{{ item.confession }}</p>
+        {% endfor %}
     </div>
 {% endblock content %}
 
