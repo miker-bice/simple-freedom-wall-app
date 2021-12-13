@@ -3,7 +3,7 @@ from .models import Confession
 
 
 class confessionAdmin(admin.ModelAdmin):
-    list_display = ('user_alias',)
+    list_display = ('user_alias', 'confession', 'timestamp')
 
 
 # Register your models here.
