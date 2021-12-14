@@ -12,8 +12,8 @@
     <div class="input-card">
         <form action="addConfession" method="post" class="main-input-form">
             {% csrf_token %}
-            <input type="text" name="user-alias" placeholder="Alias" class="name-input">
-            <input type="text" name="confession" placeholder="Your confession... " class="confession-input">
+            <input type="text" name="user-alias" placeholder="Alias" class="name-input" required>
+            <input type="text" name="confession" placeholder="Your confession... " class="confession-input" required>
             <input type="submit" value="Add" class="submit-btn">
         </form>
     </div>
