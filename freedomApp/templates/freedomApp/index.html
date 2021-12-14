@@ -1,20 +1,28 @@
-{% extends 'base.html' %}
-{% block content %}
-    <div class="confessions-card">
-        {% for item in all_items %}
-        <h3>{{ item.user_alias }}</h3>
-        <p>{{ item.confession }}</p>
-        {% endfor %}
-    </div>
-{% endblock content %}
-
-{% block input-form %}
-    <div class="input-card">
-        <form action="addConfession" method="post" class="main-input-form">
-            {% csrf_token %}
-            <input type="text" name="user-alias" placeholder="Alias" class="name-input" required>
-            <input type="text" name="confession" placeholder="Your confession... " class="confession-input" required>
-            <input type="submit" value="Add" class="submit-btn">
-        </form>
-    </div>
+{% extends 'base.html' %} {% block content %}
+<div class="confessions-card">
+  {% for item in all_items %}
+  <h3>{{ item.user_alias }}</h3>
+  <p>{{ item.confession }}</p>
+  {% endfor %}
+</div>
+{% endblock content %} {% block input-form %}
+<div class="input-card">
+  <form action="addConfession" method="post" class="main-input-form">
+    {% csrf_token %}
+    <input
+      type="text"
+      name="user-alias"
+      placeholder="Alias"
+      class="name-input"
+      required
+    />
+    <textarea
+      name="confession"
+      placeholder="Your confession..."
+      class="confession-input form-control"
+      required
+    ></textarea>
+    <input type="submit" value="Add" class="submit-btn" />
+  </form>
+</div>
 {% endblock input-form %}
