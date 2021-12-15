@@ -1,12 +1,17 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} 
+
+<!-- CONTENT BLOCK -->
+{% block content %}
+{% for item in all_items %}
 <div class="confessions-card">
-  {% for item in all_items %}
   <h3>{{ item.user_alias }}</h3>
   <p>{{ item.confession }}</p>
-  {% endfor %}
 </div>
-{% endblock content %} {% block input-form %}
-<div class="input-card">
+{% endfor %}
+{% endblock content %} 
+
+<!-- INPUT-FORM BLOCK -->
+{% block input-form %}
   <form action="addConfession" method="post" class="main-input-form">
     {% csrf_token %}
     <input
@@ -24,5 +29,4 @@
     ></textarea>
     <input type="submit" value="Add" class="submit-btn" />
   </form>
-</div>
 {% endblock input-form %}

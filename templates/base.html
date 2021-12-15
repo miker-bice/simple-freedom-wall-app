@@ -12,15 +12,18 @@
 </head>
 <body>
     <div class="container-fluid">
-        <div class="freedom-app-container">
+        <div class="freedom-app">
             <h1>Freedom Wall</h1>
-            <h2>Share your thoughts anonymously</h2>
+            <h2>Share mo na yan!</h2>
+            <div class="input-card">
+                {% block input-form %}{% endblock input-form %}
+            </div>
+            <h3>Confessions</h3>
+            <div class="confessions-cards grid">
+                {% block content %}{% endblock content %}
+            </div>
         </div>
-        <div class="confessions-cards grid">
-            {% block input-form %}{% endblock input-form %}
-            {% block content %}
-            {% endblock content %}
-        </div>
+        
     </div>
     
 </body>
