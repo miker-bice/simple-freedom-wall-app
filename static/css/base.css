@@ -24,6 +24,9 @@ body{
 .grid{
     display: grid;
 }
+.flex{
+    display: flex;
+}
 .btn{
     display: inline-block;
     cursor: pointer;
@@ -85,6 +88,10 @@ body{
 .confession-card h3{
     font-weight: 600;
     font-size: 1.1em;
+    margin-left: 10px;
+}
+.confession-card img{
+    width: 20px;
 }
 .confession-card p{
     font-size: .90em;
