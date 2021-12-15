@@ -40,7 +40,17 @@ body{
 .btn-block{
     width: 100%;
 }
-
+.form-control{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--secondary);
+    color: var(--primary);
+    font-size: .90em;
+}
+.form-control:focus{
+    outline: none;
+}
 
 
 /* mobile styles */
