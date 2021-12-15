@@ -2,6 +2,7 @@
 :root{
     --primary: #242424;
     --secondary: #e0dede;
+    --third: #eeeded;
 }
 
 /* reset */
@@ -59,6 +60,9 @@ body{
 .freedom-app h2{
     font-weight: 400;
 }
+.freedom-app h3{
+    text-align: left;
+}
 .input-card{
     margin: 10px 0;
 }
@@ -72,9 +76,30 @@ body{
     height: 100px;
 }
 .confession-card{
-    background-color: var(--secondary);
+    background-color: var(--third);
     text-align: left;
     margin: 10px 0;
     padding: 25px;
     border-radius: 10px;
+}
+.confession-card h3{
+    font-weight: 600;
+    font-size: 1.1em;
+}
+.confession-card p{
+    font-size: .90em;
+}
+
+/* tables-styling */
+@media screen and (min-width: 620px) {
+    .container-fluid{
+        padding: 5% 15%;
+    }
+}
+
+/* desktop styling */
+@media screen and (min-width: 1200px) {
+    .container-fluid{
+        padding: 5% 25%;
+    }
 }
