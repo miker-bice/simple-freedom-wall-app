@@ -88,10 +88,18 @@ body{
 .confession-card h3{
     font-weight: 600;
     font-size: 1.1em;
-    margin-left: 10px;
+    margin-left: 5px;
+}
+.confession-head{
+    align-items: center;
 }
 .confession-card img{
     width: 20px;
+}
+.confession-card h6{
+    color: var(--primary);
+    font-weight: 400;
+    text-align: end;
 }
 .confession-card p{
     font-size: .90em;
