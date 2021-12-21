@@ -1,0 +1,121 @@
+/* variables */
+:root{
+    --primary: #242424;
+    --secondary: #e0dede;
+    --third: #eeeded;
+}
+
+/* reset */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* font */
+
+/* base styles */
+.container-fluid{
+    padding: 5% 6%;
+}
+.grid{
+    display: grid;
+}
+.flex{
+    display: flex;
+}
+.btn{
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+.btn-dark{
+    color: #fff;
+    background-color: var(--primary);
+}
+.btn-dark:hover{
+    background-color: #1a1919;
+}
+.btn-block{
+    width: 100%;
+}
+.form-control{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--secondary);
+    color: var(--primary);
+    font-size: .90em;
+}
+.form-control:focus{
+    outline: none;
+}
+
+/* mobile styles */
+.freedom-app{
+    text-align: center;
+}
+.freedom-app h2{
+    font-weight: 400;
+}
+.freedom-app h3{
+    text-align: left;
+}
+.input-card{
+    margin: 10px 0;
+}
+.input-card input{
+    margin: 5px 0;
+}
+.confession-input{
+    font-family: 'Segoe UI', sans-serif;
+    font-size: .90em;
+    resize: none;
+    height: 100px;
+}
+.confession-card{
+    background-color: var(--third);
+    text-align: left;
+    margin: 10px 0;
+    padding: 25px;
+    border-radius: 10px;
+}
+.confession-card h3{
+    font-weight: 600;
+    font-size: 1.1em;
+    margin-left: 5px;
+}
+.confession-head{
+    align-items: center;
+}
+.confession-card img{
+    width: 20px;
+}
+.confession-card h6{
+    color: var(--primary);
+    font-weight: 400;
+    text-align: end;
+    margin-top: 10px;
+}
+.confession-card p{
+    font-size: .90em;
+}
+
+/* tables-styling */
+@media screen and (min-width: 620px) {
+    .container-fluid{
+        padding: 5% 15%;
+    }
+}
+
+/* desktop styling */
+@media screen and (min-width: 1200px) {
+    .container-fluid{
+        padding: 5% 25%;
+    }
+}

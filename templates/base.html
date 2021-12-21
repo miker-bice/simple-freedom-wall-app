@@ -5,19 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BASE CSS link -->
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+
     <title>Freedom Wall | Share your thoughts anonymously</title>
 </head>
 <body>
     <div class="container-fluid">
-        <div class="freedom-app-container">
+        <div class="freedom-app">
             <h1>Freedom Wall</h1>
-            <h2>Share your thoughts anonymously</h2>
+            <h2>Share mo na yan!</h2>
+            <div class="input-card">
+                {% block input-form %}{% endblock input-form %}
+            </div>
+            <h3>Confessions</h3>
+            <div class="confession-cards grid">
+                {% block content %}{% endblock content %}
+            </div>
         </div>
-        <div class="confessions-cards grid">
-            {% block input-form %}{% endblock input-form %}
-            {% block content %}
-            {% endblock content %}
-        </div>
+        
     </div>
     
 </body>

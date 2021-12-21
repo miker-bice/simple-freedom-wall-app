@@ -6,7 +6,7 @@ from .models import Confession
 
 # Create your views here.
 def index(request):
-    all_confession_items = Confession.objects.all()
+    all_confession_items = Confession.objects.all().order_by('-id')
     return render(request, 'freedomApp/index.html', {'all_items': all_confession_items})
 
 
