@@ -18,3 +18,7 @@ def addConfessionView(request):
     new_item = Confession(user_alias=new_alias, confession=new_confession)
     new_item.save()
     return HttpResponseRedirect('/freedom-app/')
+
+
+def new_page(request):
+    return render(request, 'freedomApp/new.html', {})
