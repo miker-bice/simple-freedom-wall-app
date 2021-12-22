@@ -11,7 +11,7 @@ def index(request):
 
 
 # This function saves new confessions made by the user
-def addConfessionView(request):
+def add_confession(request):
     # new_alias, new_confession = request.POST['user-alias', 'confession']
     new_alias = request.POST['user-alias']
     new_confession = request.POST['confession']

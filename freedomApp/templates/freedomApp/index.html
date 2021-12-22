@@ -7,7 +7,7 @@
       <h1>Freedom Wall</h1>
       <h2>Share mo na yan!</h2>
       <div class="input-card">
-          <form action="addConfession" method="post">
+          <form action="{% url 'add-confession' %}" method="post">
             {% csrf_token %}
             <input
               type="text"
