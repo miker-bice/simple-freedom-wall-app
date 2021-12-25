@@ -1,6 +1,14 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block title %}
+<title>Freedom Wall | Home</title>
+{% endblock title %}
+
+{% block styling %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock styling %}
+
 {% block content %}
 <div class="container-fluid">
   <div class="freedom-app">

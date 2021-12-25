@@ -1,0 +1,47 @@
+.freedom-app{
+    text-align: center;
+}
+.freedom-app h2{
+    font-weight: 400;
+}
+.freedom-app h3{
+    text-align: left;
+}
+.input-card{
+    margin: 10px 0;
+}
+.input-card input{
+    margin: 5px 0;
+}
+.confession-input{
+    font-family: 'Segoe UI', sans-serif;
+    font-size: .90em;
+    resize: none;
+    height: 100px;
+}
+.confession-card{
+    background-color: var(--third);
+    text-align: left;
+    margin: 10px 0;
+    padding: 25px;
+    border-radius: 10px;
+}
+.confession-card h3{
+    font-weight: 600;
+    font-size: 1.1em;
+}
+.confession-head{
+    align-items: center;
+}
+.confession-card img{
+    width: 20px;
+}
+.confession-card h6{
+    color: var(--primary);
+    font-weight: 400;
+    text-align: end;
+    margin-top: 10px;
+}
+.confession-card p{
+    font-size: .90em;
+}
