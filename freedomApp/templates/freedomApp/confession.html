@@ -1,6 +1,51 @@
-{% extends 'base.html' %}
-{% load static %}
-
+{% extends 'base.html' %} 
+{% load static %} 
 {% block content %}
-    <h1>This is a new page with extend</h1>
+<div class="container-fluid">
+  <div class="freedom-app">
+    <div class="confession-cards grid">
+      <div class="confession-card">
+        <h3>Sample Alias</h3>
+        <h5 class="confession-timestamp">12/01/2021</h5>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae
+          voluptas corrupti eius ipsum, veniam amet?
+        </p>
+        <div class="comments-cards">
+          <div class="comment-input">
+            <form action="add-comment" method="POST" class="comment-form">
+              <input
+                type="text"
+                name="commenter-alias"
+                placeholder="Alias"
+                class="commenter-alias-input form-control"
+                id=""
+                required
+                autocomplete="off"
+              />
+              <textarea
+                name="comment-body"
+                id=""
+                placeholder="Comment here..."
+                class="comment-input form-control"
+                required
+              ></textarea>
+              <input
+                type="submit"
+                name="comment-submit"
+                value="submit"
+                class="btn btn-dark btn-block"
+              />
+            </form>
+          </div>
+          <div class="comment-card">
+            <h5>Alias Name</h5>
+            <p>This is a sample comment</p>
+            <h6 class="comment-timestamp">12/01/2021</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock content %}

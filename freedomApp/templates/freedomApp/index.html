@@ -32,7 +32,9 @@
           <div class="confession-card">
             <div class="card-head flex">
               <img src="{% static 'images/male_user.svg' %}" alt="user-image-default" class="user-image">
-              <h3>{{ item.user_alias }}</h3>
+              <a href="{% url 'confession-detail' item.id %}">
+                <h3>{{ item.user_alias }}</h3>
+              </a>
             </div>
             <p>{{ item.confession }}</p>
             <h6>{{ item.timestamp }}</h6>

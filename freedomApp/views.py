@@ -1,7 +1,7 @@
 from django.http.response import HttpResponseRedirect
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponse, HttpResponseRedirect
-from .models import Confession
+from .models import Confession, Comment
 
 
 # Create your views here.
@@ -20,5 +20,7 @@ def add_confession(request):
     return HttpResponseRedirect('/freedom-app/')
 
 
-def new_page(request):
-    return render(request, 'freedomApp/confession.html', {})
+def confession(request, item_id):
+    confession = get_object_or_404(pk=item_id)
+    comments = Comment.objects.get(pk=item_id)
+    return render(request, 'freedomApp/confession.html', {'confession': confession}, {'comments': comments})
