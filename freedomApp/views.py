@@ -21,4 +21,4 @@ def add_confession(request):
 
 
 def new_page(request):
-    return render(request, 'freedomApp/new.html', {})
+    return render(request, 'freedomApp/confession.html', {})
