@@ -3,11 +3,11 @@ from .models import Confession, Comment
 
 
 class confessionAdmin(admin.ModelAdmin):
-    list_display = ('user_alias', 'confession', 'timestamp')
+    list_display = ('id', 'user_alias', 'confession', 'timestamp')
 
 
 class commentAdmin(admin.ModelAdmin):
-    list_display = ('commenter_name', 'comment_timestamp')
+    list_display = ('id', 'commenter_name','comment_body', 'comment_timestamp', 'target')
 
 
 # Register your models here.
