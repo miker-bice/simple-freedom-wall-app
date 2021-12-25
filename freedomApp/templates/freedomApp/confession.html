@@ -5,11 +5,10 @@
   <div class="freedom-app">
     <div class="confession-cards grid">
       <div class="confession-card">
-        <h3>Sample Alias</h3>
-        <h5 class="confession-timestamp">12/01/2021</h5>
+        <h3>{{ item.user_alias }}</h3>
+        <h5 class="confession-timestamp">{{ item.timestamp }}</h5>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae
-          voluptas corrupti eius ipsum, veniam amet?
+          {{ item.confession }}
         </p>
         <div class="comments-cards">
           <div class="comment-input">

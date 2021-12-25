@@ -21,6 +21,5 @@ def add_confession(request):
 
 
 def confession(request, item_id):
-    confession = get_object_or_404(pk=item_id)
-    comments = Comment.objects.get(pk=item_id)
-    return render(request, 'freedomApp/confession.html', {'confession': confession}, {'comments': comments})
+    confession = get_object_or_404(Confession, pk=item_id)
+    return render(request, 'freedomApp/confession.html', {'item': confession})
