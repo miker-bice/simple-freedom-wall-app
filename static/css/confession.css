@@ -1,0 +1,29 @@
+.confession-timestamp{
+    color: var(--primary);
+    font-size: .70em;
+    font-weight: 400;
+}
+.comments-cards{
+    margin-top: 20px;
+}
+.comment-form{
+    margin: 10px 0;
+}
+.comment-form input{
+    margin: 5px 0;
+}
+.comment-input{
+    resize: none;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: .85em;
+}
+.comment-card{
+    margin: 10px 0;
+    color: var(--primary);
+}
+.comment-card p{
+    font-size: .90em;
+}
+.comment-timestamp{
+    justify-self: self-end;
+}

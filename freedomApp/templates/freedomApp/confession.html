@@ -1,11 +1,17 @@
 {% extends 'base.html' %} 
 {% load static %} 
+
+{% block styling %}
+<link rel="stylesheet" href="{% static 'css/confession.css' %}">
+{% endblock styling %}
+
+
 {% block content %}
 <div class="container-fluid">
   <div class="freedom-app">
     <div class="confession-cards grid">
       <div class="confession-card">
-        <h3>{{ item.user_alias }}</h3>
+        <h3 class="detail-mainheader" >{{ item.user_alias }}</h3>
         <h5 class="confession-timestamp">{{ item.timestamp }}</h5>
         <p>
           {{ item.confession }}
