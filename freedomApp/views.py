@@ -23,3 +23,12 @@ def add_confession(request):
 def confession(request, item_id):
     confession = get_object_or_404(Confession, pk=item_id)
     return render(request, 'freedomApp/confession.html', {'item': confession})
+
+
+def add_comment(request):
+    target_id = request.POST['item-id']
+    new_comment_alias = request.POST['commenter-alias']
+    new_comment_body = request.POST['comment-body']
+    new_comment = Comment(target=Confession.objects.get(pk=target_id), commenter_name=new_comment_alias, comment_body=new_comment_body)
+    new_comment.save()
+    return HttpResponseRedirect('/freedom-app/confession/' + target_id)

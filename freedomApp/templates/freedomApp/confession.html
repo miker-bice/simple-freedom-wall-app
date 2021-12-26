@@ -1,28 +1,29 @@
-{% extends 'base.html' %} 
-{% load static %} 
+{% extends 'base.html' %} {% load static %} 
 
 {% block title %}
 <title>Freedom Wall | Confession</title>
-{% endblock title %}
+{% endblock title %} 
 
 {% block styling %}
-<link rel="stylesheet" href="{% static 'css/confession.css' %}">
-{% endblock styling %}
-
+<link rel="stylesheet" href="{% static 'css/confession.css' %}" />
+{% endblock styling %} 
 
 {% block content %}
 <div class="container-fluid">
   <div class="freedom-app">
     <div class="confession-cards grid">
       <div class="confession-card">
-        <h3 class="detail-mainheader" >{{ item.user_alias }}</h3>
+        <h3 class="detail-mainheader">{{ item.user_alias }}</h3>
         <h5 class="confession-timestamp">{{ item.timestamp }}</h5>
-        <p>
-          {{ item.confession }}
-        </p>
+        <p>{{ item.confession }}</p>
         <div class="comments-cards">
           <div class="comment-input">
-            <form action="add-comment" method="POST" class="comment-form">
+            <form
+              action="{% url 'add-comment' %}"
+              method="post"
+              class="comment-form"
+            >
+              {% csrf_token %}
               <input
                 type="text"
                 name="commenter-alias"
@@ -39,12 +40,14 @@
                 class="comment-input form-control"
                 required
               ></textarea>
+              <input type="hidden" name="item-id" value='{{ item.id }}'>
               <input
                 type="submit"
                 name="comment-submit"
                 value="submit"
                 class="btn btn-dark btn-block"
               />
+              
             </form>
           </div>
           <div class="comment-card">
