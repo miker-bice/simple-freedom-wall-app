@@ -24,6 +24,7 @@
 .comment-card p{
     font-size: .90em;
 }
-.comment-timestamp{
-    justify-self: self-end;
+.comment-card h6{
+    text-align: end;
+    font-weight: 400;
 }
