@@ -50,11 +50,13 @@
               
             </form>
           </div>
+          {% for item in item_comments %}
           <div class="comment-card">
-            <h5>Alias Name</h5>
-            <p>This is a sample comment</p>
+            <h5>{{ item.commenter_name }}</h5>
+            <p>{{ item.comment_body }}</p>
             <h6 class="comment-timestamp">12/01/2021</h6>
           </div>
+          {% endfor %}
         </div>
       </div>
     </div>
