@@ -22,9 +22,13 @@ def add_confession(request):
 
 def confession(request, item_id):
     confession = get_object_or_404(Confession, pk=item_id)
-    return render(request, 'freedomApp/confession.html', {'item': confession})
+    target = Confession.objects.get(pk=item_id)
+    comments = Comment.objects.filter(target=target.id).order_by('-comment_timestamp')
+    # comments = Comment.objects.filter(target=Confession.objects.get(pk=item_id))
+    return render(request, 'freedomApp/confession.html', {'item': confession, 'comments': comments})
 
 
+# This function saves a new comment in a specific confession thread
 def add_comment(request):
     target_id = request.POST['item-id']
     new_comment_alias = request.POST['commenter-alias']
