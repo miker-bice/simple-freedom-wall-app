@@ -1,6 +1,66 @@
-{% extends 'base.html' %}
-{% load static %}
+{% extends 'base.html' %} {% load static %} 
+
+{% block title %}
+<title>Freedom Wall | Confession</title>
+{% endblock title %} 
+
+{% block styling %}
+<link rel="stylesheet" href="{% static 'css/confession.css' %}" />
+{% endblock styling %} 
 
 {% block content %}
-    <h1>This is a new page with extend</h1>
+<div class="container-fluid">
+  <div class="freedom-app">
+    <div class="confession-cards grid">
+      <div class="confession-card">
+        <h3 class="detail-mainheader">{{ item.user_alias }}</h3>
+        <h5 class="confession-timestamp">{{ item.timestamp }}</h5>
+        <p>{{ item.confession }}</p>
+        <div class="comments-cards">
+          <hr>
+          <div class="comment-input">
+            <form
+              action="{% url 'add-comment' %}"
+              method="post"
+              class="comment-form"
+            >
+              {% csrf_token %}
+              <input
+                type="text"
+                name="commenter-alias"
+                placeholder="Alias"
+                class="commenter-alias-input form-control"
+                id=""
+                required
+                autocomplete="off"
+              />
+              <textarea
+                name="comment-body"
+                id=""
+                placeholder="Comment here..."
+                class="comment-input form-control"
+                required
+              ></textarea>
+              <input type="hidden" name="item-id" value='{{ item.id }}'>
+              <input
+                type="submit"
+                name="comment-submit"
+                value="SUBMIT"
+                class="btn btn-dark btn-block"
+              />
+              
+            </form>
+          </div>
+          {% for item in comments %}
+          <div class="comment-card">
+            <h5>{{ item.commenter_name }}</h5>
+            <p>{{ item.comment_body }}</p>
+            <h6 class="comment-timestamp">{{ item.comment_timestamp }}</h6>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock content %}
