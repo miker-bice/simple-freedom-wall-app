@@ -1,5 +1,5 @@
 from django.db import models
-from datetime import datetime, date
+from django.utils import timezone
 
 from django.db.models.deletion import CASCADE
 

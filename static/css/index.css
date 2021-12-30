@@ -35,6 +35,7 @@
 }
 .confession-card img{
     width: 20px;
+    margin-right: 5px;
 }
 .confession-card h6{
     color: var(--primary);
