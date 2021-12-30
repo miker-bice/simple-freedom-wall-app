@@ -3,6 +3,7 @@
     --primary: #242424;
     --secondary: #e0dede;
     --third: #eeeded;
+    --background-main: #ededed;
 }
 
 /* reset */
@@ -13,6 +14,7 @@
 }
 body{
     font-family: 'Segoe UI', sans-serif;
+    background-color: var(--background-main);
 }
 a,li{
     list-style-type: none;
