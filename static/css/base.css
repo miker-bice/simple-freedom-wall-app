@@ -55,7 +55,7 @@ a,li{
     width: 100%;
     padding: 10px;
     border-radius: 10px;
-    border: 1px solid var(--secondary);
+    border: none;
     color: var(--primary);
     font-size: .90em;
 }
@@ -68,22 +68,18 @@ a,li{
     padding: 1.5% 6%;
     grid-template-columns: repeat(12, 1fr);
     align-items: center;
-    background-color: var(--primary);
+    background-color: var(--background-main);
 }
 .navbar-brand{
     grid-column: 1/6;
 }
 .navbar-brand a{
-    color: var(--secondary);
     font-weight: 500;
     font-size: 1.25em;
 }
 .nav-links{
     grid-column: 12/13;
     justify-content: flex-end;
-}
-.nav-links a{
-    color: var(--secondary);
 }
 
 /* tables-styling */
