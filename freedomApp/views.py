@@ -1,6 +1,5 @@
-from django.http.response import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponseRedirect
 from .models import Confession, Comment
 
 
@@ -21,11 +20,10 @@ def add_confession(request):
 
 
 def confession(request, item_id):
-    confession = get_object_or_404(Confession, pk=item_id)
-    target = Confession.objects.get(pk=item_id)
-    comments = Comment.objects.filter(target=target.id).order_by('-comment_timestamp')
-    # comments = Comment.objects.filter(target=Confession.objects.get(pk=item_id))
-    return render(request, 'freedomApp/confession.html', {'item': confession, 'comments': comments})
+    confession_items = get_object_or_404(Confession, pk=item_id)
+    target_confession = Confession.objects.get(pk=item_id)
+    comments = Comment.objects.filter(target=target_confession.id).order_by('-comment_timestamp')
+    return render(request, 'freedomApp/confession.html', {'item': confession_items, 'comments': comments})
 
 
 # This function saves a new comment in a specific confession thread
@@ -33,6 +31,7 @@ def add_comment(request):
     target_id = request.POST['item-id']
     new_comment_alias = request.POST['commenter-alias']
     new_comment_body = request.POST['comment-body']
-    new_comment = Comment(target=Confession.objects.get(pk=target_id), commenter_name=new_comment_alias, comment_body=new_comment_body)
+    target_comment = Confession.objects.get(pk=target_id)
+    new_comment = Comment(target=target_comment.id, commenter_name=new_comment_alias, comment_body=new_comment_body)
     new_comment.save()
     return HttpResponseRedirect('/freedom-app/confession/' + target_id)

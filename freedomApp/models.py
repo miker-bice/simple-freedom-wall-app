@@ -1,7 +1,4 @@
 from django.db import models
-from django.utils import timezone
-
-from django.db.models.deletion import CASCADE
 
 
 # Create your models here.
