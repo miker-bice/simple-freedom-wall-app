@@ -31,7 +31,7 @@ def add_comment(request):
     target_id = request.POST['item-id']
     new_comment_alias = request.POST['commenter-alias']
     new_comment_body = request.POST['comment-body']
-    target_comment = Confession.objects.get(pk=target_id)
-    new_comment = Comment(target=target_comment.id, commenter_name=new_comment_alias, comment_body=new_comment_body)
+    new_comment = Comment(target=Confession.objects.get(pk=target_id), commenter_name=new_comment_alias,
+                          comment_body=new_comment_body)
     new_comment.save()
     return HttpResponseRedirect('/freedom-app/confession/' + target_id)
