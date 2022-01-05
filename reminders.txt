@@ -2,7 +2,7 @@ TO DO (January 03, 2022)
 - Implement Google Fonts CDN link so that users who want to
 clone that project will be able to use the same font 
 
-- Code refactoring
+- Code refactoring(DONE)
     * Add useful comments
 
 - Implement a welcome screen that will lead directly to the
@@ -10,6 +10,6 @@ Freedom Wall web app
 
 - Apply custom 404 pages
 
-- Bug checking
+- Bug checking (DONE)
 
 - Try to deploy the project in netlify or heroku

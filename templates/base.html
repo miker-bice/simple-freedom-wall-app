@@ -1,33 +1,44 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- BASE CSS link -->
     <link rel="stylesheet" href="{% static 'css/base.css' %}" />
 
     <!-- Custom STYLING -->
     {% block styling %}{% endblock styling %}
 
+    <!-- Font Awesome CDN -->
+    <script src="https://kit.fontawesome.com/22e34196a9.js" crossorigin="anonymous"></script>
 
     {% block title %}{% endblock title %}
-</head>
-<body>
+  </head>
+  <body>
     <div class="header">
-        <div class="navigation grid">
-            <div class="navbar-brand">
-                <a href="{% url 'home' %}" class="brand-logo">Freedom Wall</a>
-            </div>
-            <div class="nav-links flex">
-                <ul class="nav-items">
-                    <li class="nav-item"><a href="#">New</a></li>
-                </ul>
-            </div>
+      <div class="navigation grid">
+        <div class="navbar-brand">
+          <a href="{% url 'home' %}" class="brand-logo">Freedom Wall</a>
         </div>
+        <div class="nav-links flex">
+          <ul class="nav-items">
+            <li class="nav-item"><a href="#">New</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
     {% block content %}{% endblock content %}
-    
-</body>
+    <footer>
+      <div class="app-footer">
+        <h2>Made by Mike Jerrson Galindez</h2>
+        <div class="footer-icons">
+          <a href="https://github.com/miker-bice" class="icon"><i class="fab fa-2x fa-github"></i></a>
+          <a href="https://ph.linkedin.com/in/mike-jerrson-galindez-2a8502222" class="icon"><i class="fab fa-2x fa-linkedin"></i></a>
+          <a href="" class="icon"><i class="fab fa-2x fa-facebook"></i></a>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
