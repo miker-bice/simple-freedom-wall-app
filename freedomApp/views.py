@@ -35,3 +35,7 @@ def add_comment(request):
                           comment_body=new_comment_body)
     new_comment.save()
     return HttpResponseRedirect('/freedom-app/confession/' + target_id)
+
+
+def entry_not_found(request, exception):
+    return render(request, '404.html', status=404)
