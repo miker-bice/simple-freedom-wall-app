@@ -15,7 +15,6 @@
 body{
     font-family: 'Segoe UI', sans-serif;
     background-color: var(--background-main);
-    height: 100vh;
 }
 a,li{
     list-style-type: none;
@@ -69,10 +68,10 @@ a,li{
 
 /* mobile styles */
 .navigation{
-    padding: 1.5% 6%;
+    padding: 2% 6%;
     grid-template-columns: repeat(12, 1fr);
     align-items: center;
-    background-color: var(--background-main);
+    background-color: var(--primary);
 }
 .navbar-brand{
     grid-column: 1/6;
@@ -80,10 +79,7 @@ a,li{
 .navbar-brand a{
     font-weight: 500;
     font-size: 1.25em;
-}
-.nav-links{
-    grid-column: 12/13;
-    justify-content: flex-end;
+    color: #fff;
 }
 footer{
     background-color: var(--primary);
