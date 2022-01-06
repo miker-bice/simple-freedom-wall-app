@@ -1,57 +1,51 @@
-{% extends 'base.html' %}
-{% load static %}
-
-{% block title %}
+{% extends 'base.html' %} {% load static %} {% block title %}
 <title>Freedom Wall | Home</title>
-{% endblock title %}
-
-{% block styling %}
-<link rel="stylesheet" href="{% static 'css/index.css' %}">
-{% endblock styling %}
-
-{% block content %}
+{% endblock title %} {% block styling %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}" />
+{% endblock styling %} {% block content %}
 <div class="container-fluid">
   <div class="freedom-app">
-      <h1>Freedom Wall</h1>
-      <h2>Share mo na yan!</h2>
-      <div class="input-card">
-          <form action="{% url 'add-confession' %}" method="post">
-            {% csrf_token %}
-            <input
-              type="text"
-              name="user-alias"
-              placeholder="Alias"
-              class="name-input form-control"
-              autocomplete="off"
-              required
-            />
-            <textarea
-              name="confession"
-              placeholder="Your confession..."
-              class="confession-input form-control"
-              required
-            ></textarea>
-            <input type="submit" value="SUBMIT" class="btn btn-dark btn-block" />
-          </form>
+    <h1>Freedom Wall</h1>
+    <h2>Share mo na yan!</h2>
+    <div class="input-card">
+      <form action="{% url 'add-confession' %}" method="post">
+        {% csrf_token %}
+        <input
+          type="text"
+          name="user-alias"
+          placeholder="Alias"
+          class="name-input form-control"
+          autocomplete="off"
+          required
+        />
+        <textarea
+          name="confession"
+          placeholder="Your confession..."
+          class="confession-input form-control"
+          required
+        ></textarea>
+        <input type="submit" value="SUBMIT" class="btn btn-dark btn-block" />
+      </form>
+    </div>
+    <h3>Confessions</h3>
+    <div class="confession-cards grid">
+      {% for item in all_items %}
+      <div class="confession-card">
+        <div class="card-head flex">
+          <img
+            src="{% static 'images/male_user.svg' %}"
+            alt="user-image-default"
+            class="user-image"
+          />
+          <a href="{% url 'confession-detail' item.id %}">
+            <h3>{{ item.user_alias }}</h3>
+          </a>
+        </div>
+        <p>{{ item.confession }}</p>
+        <h6>{{ item.timestamp }}</h6>
       </div>
-      <h3>Confessions</h3>
-      <div class="confession-cards grid">
-          {% for item in all_items %}
-          <div class="confession-card">
-            <div class="card-head flex">
-              <img src="{% static 'images/male_user.svg' %}" alt="user-image-default" class="user-image">
-              <a href="{% url 'confession-detail' item.id %}">
-                <h3>{{ item.user_alias }}</h3>
-              </a>
-            </div>
-            <p>{{ item.confession }}</p>
-            <h6>{{ item.timestamp }}</h6>
-          </div>
-          {% endfor %}
-      </div>
+      {% endfor %}
+    </div>
   </div>
 </div>
 {% endblock content %}
-
-
-
