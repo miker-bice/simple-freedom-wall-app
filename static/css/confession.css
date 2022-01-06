@@ -7,6 +7,11 @@
     box-shadow:  6px 6px 31px #cccccc,
     -6px -6px 31px #ffffff;
 }
+.detail-mainheader{
+    font-family: var(--secondary-font);
+    font-weight: 600;
+    font-size: 1.4em;
+}
 .confession-timestamp{
     color: var(--primary);
     font-size: .70em;
@@ -29,6 +34,10 @@
 .comment-card{
     margin: 10px 0;
     color: var(--primary);
+}
+.comment-card h5{
+    font-family: var(--secondary-font);
+    font-size: .9em;
 }
 .comment-card p{
     font-size: .90em;

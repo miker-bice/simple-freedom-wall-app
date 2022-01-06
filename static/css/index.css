@@ -1,6 +1,9 @@
 .freedom-app{
     text-align: center;
 }
+.freedom-app h1{
+    font-family: var(--secondary-font);
+}
 .freedom-app h2{
     font-weight: 400;
 }
@@ -31,6 +34,7 @@
 .confession-card h3{
     font-weight: 600;
     font-size: 1.1em;
+    font-family: var(--secondary-font);
 }
 .confession-head{
     align-items: center;

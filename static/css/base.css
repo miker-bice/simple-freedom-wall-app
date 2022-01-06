@@ -4,6 +4,8 @@
     --secondary: #e0dede;
     --third: #eeeded;
     --background-main: #ededed;
+    --main-font: 'Roboto', sans-serif;
+    --secondary-font: 'Roboto Slab', serif;
 }
 
 /* reset */
@@ -13,7 +15,7 @@
     box-sizing: border-box;
 }
 body{
-    font-family: 'Segoe UI', sans-serif;
+    font-family: var(--main-font);
     background-color: var(--background-main);
 }
 a,li{
@@ -79,6 +81,7 @@ a,li{
 .navbar-brand a{
     font-weight: 500;
     font-size: 1.25em;
+    font-family: var(--secondary-font);
     color: #fff;
 }
 footer{
@@ -91,6 +94,7 @@ footer{
 footer h2{
     font-weight: 400;
     font-size: 1.25em;
+    font-family: var(--secondary-font);
 }
 .footer-icons i{
     color: #fff;
