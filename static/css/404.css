@@ -50,13 +50,15 @@ a,li{
 .main-header{
     font-family: var(--secondary-font);
     font-size: 7em;
+    color: var(--primary);
 }
 .error-text h2{
     font-family: var(--main-font);
     font-weight: 400;
     font-size: 1.25em;
+    color: var(--primary);
 }
 .error-text a{
     font-family: var(--main-font);
-    margin: 10px;
+    margin: 20px;
 }
