@@ -8,7 +8,7 @@ clone that project will be able to use the same font
 - Implement a welcome screen that will lead directly to the
 Freedom Wall web app
 
-- Apply custom 404 pages
+- Apply custom 404 pages (ALMOST DONE)
 
 - Bug checking (DONE)
 

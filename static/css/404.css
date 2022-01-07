@@ -1,4 +1,8 @@
 /* variables */
+:root{
+    --main-font: 'Roboto', sans-serif;
+    --secondary-font: 'Roboto Slab', serif;
+}
 
 /* reset */
 *{
@@ -7,15 +11,29 @@
     box-sizing: border-box;
 }
 body{
-    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
 }
 
 /* font */
 
 /* base styles */
+.container-fluid{
+    padding: 4% 20%;
+}
+.grid{
+    display: grid;
+}
 
-/* MORE CUSTOMIZATION IN THE 404 PAGE
-    ADD A CUSTOM CHARACTER
-    ADD A BUTTON THAT WILL LINK THE USER TO THE HOME PAGE
-    OF FREEDOM WALL WEB APP
-*/
+/* Mobile styling */
+.error-image img{
+    width: 13em;
+}
+.main-header{
+    font-family: var(--secondary-font);
+    font-size: 7em;
+}
+.error-text h2{
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-size: 1.25em;
+}
