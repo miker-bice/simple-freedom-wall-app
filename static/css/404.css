@@ -27,6 +27,7 @@ a,li{
 }
 .grid{
     display: grid;
+    grid-template-columns: repeat(12, 1fr);
 }
 .btn{
     display: inline-block;
@@ -44,21 +45,41 @@ a,li{
 }
 
 /* Mobile styling */
+.header{
+    align-items: center;
+    justify-self: center;
+}
+.error-image{
+    grid-column: 1/13;
+}
 .error-image img{
-    width: 13em;
+    width: 200px;
 }
 .main-header{
     font-family: var(--secondary-font);
     font-size: 7em;
-    color: var(--primary);
+}
+.error-text{
+    grid-column: 1/13;
 }
 .error-text h2{
     font-family: var(--main-font);
     font-weight: 400;
     font-size: 1.25em;
-    color: var(--primary);
 }
 .error-text a{
     font-family: var(--main-font);
     margin: 20px;
+}
+
+/* desktop styling */
+@media screen and (min-width: 1200px) {
+    .error-image{
+        grid-column: 1/5;
+    }
+    .error-text{
+        grid-column: 5/13;
+    }
+
+
 }

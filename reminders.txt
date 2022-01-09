@@ -1,6 +1,6 @@
 TO DO (January 03, 2022)
 - Implement Google Fonts CDN link so that users who want to
-clone that project will be able to use the same font 
+clone that project will be able to use the same font (DONE)
 
 - Code refactoring(DONE)
     * Add useful comments
@@ -8,7 +8,7 @@ clone that project will be able to use the same font
 - Implement a welcome screen that will lead directly to the
 Freedom Wall web app
 
-- Apply custom 404 pages (ALMOST DONE)
+- Apply custom 404 pages (DONE)
 
 - Bug checking (DONE)
 
