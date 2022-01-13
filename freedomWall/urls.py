@@ -20,3 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('freedom-app/', include('freedomApp.urls')),
 ]
+
+handler404 = 'freedomApp.views.entry_not_found'
