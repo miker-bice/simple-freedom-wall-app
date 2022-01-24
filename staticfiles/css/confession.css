@@ -1,0 +1,48 @@
+.freedom-app{
+    padding: 25px;
+    margin: 30px 0;
+    border-radius: 10px;
+    border-radius: 10px;
+    background: #ededed;
+    box-shadow:  6px 6px 31px #cccccc,
+    -6px -6px 31px #ffffff;
+}
+.detail-mainheader{
+    font-family: var(--secondary-font);
+    font-weight: 600;
+    font-size: 1.4em;
+}
+.confession-timestamp{
+    color: var(--primary);
+    font-size: .70em;
+    font-weight: 400;
+}
+.comments-cards{
+    margin-top: 20px;
+}
+.comment-form{
+    margin: 10px 0;
+}
+.comment-form input{
+    margin: 5px 0;
+}
+.comment-input{
+    resize: none;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: .85em;
+}
+.comment-card{
+    margin: 10px 0;
+    color: var(--primary);
+}
+.comment-card h5{
+    font-family: var(--secondary-font);
+    font-size: .9em;
+}
+.comment-card p{
+    font-size: .90em;
+}
+.comment-card h6{
+    text-align: end;
+    font-weight: 400;
+}

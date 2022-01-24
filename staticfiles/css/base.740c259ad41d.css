@@ -1,0 +1,118 @@
+/* variables */
+:root{
+    --primary: #242424;
+    --secondary: #e0dede;
+    --third: #eeeded;
+    --background-main: #ededed;
+    --main-font: 'Roboto', sans-serif;
+    --secondary-font: 'Roboto Slab', serif;
+}
+
+/* reset */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: var(--main-font);
+    background-color: var(--background-main);
+}
+a,li{
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+}
+
+/* font */
+
+/* base styles */
+.container-fluid{
+    padding: 5% 6%;
+}
+.grid{
+    display: grid;
+}
+.flex{
+    display: flex;
+}
+.btn{
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    box-shadow:  6px 6px 18px #cccccc,
+    -6px -6px 31px #ffffff;
+}
+.btn-dark{
+    color: #fff;
+    background-color: var(--primary);
+}
+.btn-dark:hover{
+    background-color: #1a1919;
+}
+.btn-block{
+    width: 100%;
+}
+.form-control{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    color: var(--primary);
+    font-size: .90em;
+}
+.form-control:focus{
+    outline: none;
+}
+
+/* mobile styles */
+.navigation{
+    padding: 2% 6%;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    background-color: var(--primary);
+}
+.navbar-brand{
+    grid-column: 1/6;
+}
+.navbar-brand a{
+    font-weight: 500;
+    font-size: 1.25em;
+    font-family: var(--secondary-font);
+    color: #fff;
+}
+footer{
+    background-color: var(--primary);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    align-self: center;
+}
+footer h2{
+    font-weight: 400;
+    font-size: 1.25em;
+    font-family: var(--secondary-font);
+}
+.footer-icons i{
+    color: #fff;
+    margin: 10px 5px;
+}
+
+/* tables-styling */
+@media screen and (min-width: 620px) {
+    .container-fluid{
+        padding: 5% 15%;
+    }
+    .navigation{
+        padding: 1.25% 15%;
+    }
+}
+
+/* desktop styling */
+@media screen and (min-width: 1200px) {
+    .container-fluid{
+        padding: 5% 25%;
+    }
+}
