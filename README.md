@@ -24,6 +24,8 @@ uses HTML, CSS for the front-end and Django with SQLite for the backend.
 
 **Server:** Django, SQLite
 
+**Packages:** python-dotenv(for seceurity), whtienoise(for static files and assets)
+
 
 ## Roadmap
 
