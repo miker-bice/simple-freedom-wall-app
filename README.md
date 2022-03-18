@@ -20,9 +20,9 @@ uses HTML, CSS for the front-end and Django with SQLite for the backend.
 
 ## Tech Stack
 
-**Client:** HTML, CSS
+**Front-end:** HTML, CSS
 
-**Server:** Django, SQLite
+**Back-end:** Python, Django, SQLite
 
 **Packages:** python-dotenv(for seceurity), whtienoise(for static files and assets)
 
